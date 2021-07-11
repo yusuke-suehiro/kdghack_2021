@@ -5,10 +5,12 @@
   "description": "Zoom sample app for web client WebSDK",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "set NODE_ENV=development && set BABEL_ENV=development && webpack serve --config webpack.config.dev.js",
-    "https": "set NODE_ENV=development && set BABEL_ENV=development && webpack serve --config webpack.config.dev.js --https",
-    "corp": "set NODE_ENV=development && set BABEL_ENV=development && node corp.js --corp"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "keywords": [
     "zoom",
